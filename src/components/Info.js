@@ -9,9 +9,11 @@ export default function Info() {
         <div>
           <h3>What is a Supertrawler?</h3>
           <p>
-            A supertrawler is an enormous industrial fish factory. Supertrawlers
-            are over 100 meters long, with nets that could hold 13 jumbo jets.
+            A supertrawler is an enormous industrial fish factory that are over
+            100 meters long.
           </p>
+          <p>They have nets that could fit 13 jumbo jets.</p>
+          <p>✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈</p>
           <p>
             Onboard fish processing allows supertrawlers to remain active for
             months.
@@ -19,12 +21,12 @@ export default function Info() {
         </div>
         <div>
           <h3>Supertrawlers are plundering earth's oceans.</h3>
-          <p>Nets do not discriminate and bi-catch is inevitable.</p>
+          <p>Nets are a crude and bi-catch is inevitable.</p>
           <p>Supertrawlers operate in marine protected areas.</p>
           <p>The nets can catch hundreds of tonnes of fish everyday</p>
         </div>
         <div>
-          <h3>The problem is getting works</h3>
+          <h3>The problem is getting worse</h3>
 
           <p>
             Time spent in marine protected areas by supertrawlers in the first

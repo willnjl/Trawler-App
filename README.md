@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trawler Alert
 
-## Available Scripts
+## Whats the Big Deal?
 
-In the project directory, you can run:
+### What is a supertrawler?
 
-### `npm start`
+A supertrawler is an enormous industrial fish factory that are over 100 meters long.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+They have nets that could fit 13 jumbo jets.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈
 
-### `npm test`
+Onboard fish processing allows supertrawlers to remain active for months.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Supertrawlers are plundering earth's oceans.
 
-### `npm run build`
+Nets are a crude and bi-catch is inevitable.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Supertrawlers operate in marine protected areas.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The nets can catch hundreds of tonnes of fish everyday
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### The problem is getting worse
 
-### `npm run eject`
+Time spent in marine protected areas by supertrawlers in the first half 2020 was more than double than the whole of last year.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This threatens vital ocean habitats and ecosystems
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+According to Greenpeace data supertrawlers spent 5,590 hours in 19 of the UK’s marine protected areas in the first six months of 2020, compared with 2,963 hours in 39 protected areas in the whole of last year.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Supertrawlers hurt economies.
+Supertrawlers are plunding our seas meaning fishing is unsustainable long term and taking away livelyhoods of local fishers around the world.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+They can sell their catch wherever they get the best price. Meaning even if they catch fish in British waters, it will likely not up on British Plates.
 
-## Learn More
+### We have an opertunity to make a change.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Regardless of what you think of leaving the EU, when the UK leaves the EU common fisheries policy it will be possible to ban supertrawlers
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Last year 23 supertrawlers operated in UK waters. None we're British.
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This will only happen if people are aware of the scale of the problem and lobby their MP's
