@@ -19,7 +19,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className="page-wrapper">
       <header className="App-header">
         <NavBar />
       </header>
