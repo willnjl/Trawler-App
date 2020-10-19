@@ -5,10 +5,7 @@ import { howLongAgo } from "../data/functions";
 export default function PopupTable({ vessel }) {
   return (
     <>
-      <img
-        src="https://static.vesselfinder.net/ship-photo/8301187-277330000-f47c41dbb290736e2aa19b4c36f51f09/1?"
-        className="popup-img"
-      />
+      <img src={vessel.img_url} className="popup-img" />
       <Table striped bordered>
         <tbody>
           <tr>
@@ -29,6 +26,12 @@ export default function PopupTable({ vessel }) {
             <th scope="row">{"Position Received"}</th>
             <td>
               <i>{howLongAgo(vessel["signal_received"])}</i>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{"info"}</th>
+            <td>
+              <a href={vessel.vessel_url}>{"Link"}</a>
             </td>
           </tr>
         </tbody>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import leafletPip from "@mapbox/leaflet-pip";
 import icon from "../assets/marker-icon.png";
 
