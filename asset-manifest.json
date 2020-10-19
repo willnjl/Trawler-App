@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Trawler-App/static/css/main.b3a8b261.chunk.css",
+    "main.js": "/Trawler-App/static/js/main.de661e32.chunk.js",
+    "main.js.map": "/Trawler-App/static/js/main.de661e32.chunk.js.map",
+    "runtime-main.js": "/Trawler-App/static/js/runtime-main.1bb273cc.js",
+    "runtime-main.js.map": "/Trawler-App/static/js/runtime-main.1bb273cc.js.map",
+    "static/css/2.65dbc30e.chunk.css": "/Trawler-App/static/css/2.65dbc30e.chunk.css",
+    "static/js/2.b499fdd0.chunk.js": "/Trawler-App/static/js/2.b499fdd0.chunk.js",
+    "static/js/2.b499fdd0.chunk.js.map": "/Trawler-App/static/js/2.b499fdd0.chunk.js.map",
+    "index.html": "/Trawler-App/index.html",
+    "precache-manifest.346e9d1a4101818e7fc6a78b414318d3.js": "/Trawler-App/precache-manifest.346e9d1a4101818e7fc6a78b414318d3.js",
+    "service-worker.js": "/Trawler-App/service-worker.js",
+    "static/css/2.65dbc30e.chunk.css.map": "/Trawler-App/static/css/2.65dbc30e.chunk.css.map",
+    "static/css/main.b3a8b261.chunk.css.map": "/Trawler-App/static/css/main.b3a8b261.chunk.css.map",
+    "static/js/2.b499fdd0.chunk.js.LICENSE.txt": "/Trawler-App/static/js/2.b499fdd0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1bb273cc.js",
+    "static/css/2.65dbc30e.chunk.css",
+    "static/js/2.b499fdd0.chunk.js",
+    "static/css/main.b3a8b261.chunk.css",
+    "static/js/main.de661e32.chunk.js"
+  ]
+}
