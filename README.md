@@ -26,7 +26,7 @@ A supertrawler is an enormous industrial fish factory that are over 100 meters l
 
 They have nets that could fit 13 jumbo jets.
 
-✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈
+✈ ✈ ✈ ✈ ✈ ✈   ✈ ✈ ✈ ✈ ✈ ✈   ✈✈✈
 
 Onboard fish processing allows supertrawlers to remain active for months.
 
