@@ -3,7 +3,7 @@ import React from "react";
 export default function Info() {
   return (
     <React.Fragment>
-      <section>
+      <section id={"why"}>
         <h2>Whats the Big Deal?</h2>
 
         <div>

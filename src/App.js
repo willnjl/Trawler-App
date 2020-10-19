@@ -23,7 +23,7 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <LeafletComponent boats={boats} loaded={loaded} />
+      <LeafletComponent boats={boats} loaded={loaded} id={"map"} />
       {loaded ? <VesselsTable vessels={boats} /> : <Loading />}
       <Info />
     </div>

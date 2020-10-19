@@ -4,7 +4,7 @@ import { howLongAgo } from "../data/functions";
 export default function VesselsTable({ vessels }) {
   return (
     <Table striped>
-      <thead>
+      <thead id={"data"}>
         <tr>
           <th>#</th>
           <th>Name</th>
