@@ -15,7 +15,7 @@ import {
 import L from "leaflet";
 import { data } from "../data/ukBounds";
 import axios from "../axios";
-import VesselTable from "./VesselTable";
+import PopupTable from "./PopupTable";
 
 const polyLayer = L.geoJSON(data, {
   style: {
@@ -38,8 +38,7 @@ const boundaryStyle = () => {
   };
 };
 const boundaryFilter = (vessels) =>
-  leafletPip.pointInLayer([vessels["lon"], vessels["lat"]], polyLayer).length >
-  0;
+  leafletPip.pointInLayer([vessels.lon, vessels.lat], polyLayer).length > 0;
 
 export default function LeafletComponent() {
   const [loaded, setLoaded] = useState(false);
@@ -93,7 +92,7 @@ export default function LeafletComponent() {
                         key={vessel.id}
                       >
                         <Popup key={vessel.id}>
-                          <VesselTable vessel={vessel} />
+                          <PopupTable vessel={vessel} />
                         </Popup>
                       </Marker>
                     );

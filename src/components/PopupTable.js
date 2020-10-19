@@ -27,7 +27,7 @@ const howLongAgo = (timestamp) => {
   }
 };
 
-export default function VesselTable({ vessel }) {
+export default function PopupTable({ vessel }) {
   return (
     <>
       <img
