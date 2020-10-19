@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3da09c329ea51f6e935724fea6a8c9cf",
+    "revision": "399fa43a75be5c33ff1d74b26485c4bd",
     "url": "/Trawler-App/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Trawler-App/static/css/2.65dbc30e.chunk.css"
   },
   {
-    "revision": "0a719400a3ac3c88fb2f",
+    "revision": "f11a68a0488e04ee9e17",
     "url": "/Trawler-App/static/css/main.b3a8b261.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Trawler-App/static/js/2.b499fdd0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a719400a3ac3c88fb2f",
-    "url": "/Trawler-App/static/js/main.de661e32.chunk.js"
+    "revision": "f11a68a0488e04ee9e17",
+    "url": "/Trawler-App/static/js/main.7d7c8e45.chunk.js"
   },
   {
     "revision": "633585f9b4cdf4d63804",
