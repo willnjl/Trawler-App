@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from "react";
-import L from "leaflet";
 import leafletPip from "@mapbox/leaflet-pip";
-import { Map, TileLayer, LayersControl, WMSTileLayer } from "react-leaflet";
+import icon from "../assets/marker-icon.png";
+
+import {
+  Map,
+  TileLayer,
+  LayersControl,
+  WMSTileLayer,
+  Marker,
+  Popup,
+  LayerGroup,
+  GeoJSON,
+} from "react-leaflet";
+import L from "leaflet";
 import { data } from "../data/ukBounds";
 import axios from "../axios";
+import VesselTable from "./VesselTable";
 
 const polyLayer = L.geoJSON(data, {
   style: {
@@ -13,18 +25,31 @@ const polyLayer = L.geoJSON(data, {
     fillOpacity: 0.5,
   },
 });
+
+const vesselMarker = L.icon({
+  iconUrl: icon,
+  iconAnchor: [12.5, 41],
+  popupAnchor: [0, -30],
+});
+
+const boundaryStyle = () => {
+  return {
+    color: "red",
+  };
+};
 const boundaryFilter = (vessels) =>
   leafletPip.pointInLayer([vessels["lon"], vessels["lat"]], polyLayer).length >
   0;
 
 export default function LeafletComponent() {
   const [loaded, setLoaded] = useState(false);
+  const [boats, setBoats] = useState([]);
 
   useEffect(() => {
     axios.get("vessels").then((response) => {
       setLoaded(true);
-      const boats = response.data;
-      console.log(boats.filter(boundaryFilter));
+      const data = response.data;
+      setBoats([...data]);
     });
   }, []);
 
@@ -54,6 +79,28 @@ export default function LeafletComponent() {
               url="http://geo.vliz.be/geoserver/MarineRegions/wms?"
             />
           </LayersControl.BaseLayer>
+          <LayersControl.Overlay name="Boundary" checked={true}>
+            <GeoJSON data={data} style={boundaryStyle()} />
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Supertrawlers" checked={true}>
+            <LayerGroup>
+              {loaded
+                ? boats.map((vessel) => {
+                    return (
+                      <Marker
+                        position={[vessel.lat, vessel.lon]}
+                        icon={vesselMarker}
+                        key={vessel.id}
+                      >
+                        <Popup key={vessel.id}>
+                          <VesselTable vessel={vessel} />
+                        </Popup>
+                      </Marker>
+                    );
+                  })
+                : null}
+            </LayerGroup>
+          </LayersControl.Overlay>
         </LayersControl>
       </Map>
       <p>{loaded ? "true " : "false"}</p>
