@@ -14,7 +14,7 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import { data } from "../data/ukBounds";
-import axios from "../axios";
+
 import PopupTable from "./PopupTable";
 
 const polyLayer = L.geoJSON(data, {
@@ -40,18 +40,7 @@ const boundaryStyle = () => {
 const boundaryFilter = (vessels) =>
   leafletPip.pointInLayer([vessels.lon, vessels.lat], polyLayer).length > 0;
 
-export default function LeafletComponent() {
-  const [loaded, setLoaded] = useState(false);
-  const [boats, setBoats] = useState([]);
-
-  useEffect(() => {
-    axios.get("vessels").then((response) => {
-      setLoaded(true);
-      const data = response.data;
-      setBoats([...data]);
-    });
-  }, []);
-
+export default function LeafletComponent({ boats, loaded }) {
   const view = {
     lat: 55.8309257,
     lon: -4.4509832,
@@ -90,6 +79,7 @@ export default function LeafletComponent() {
                         position={[vessel.lat, vessel.lon]}
                         icon={vesselMarker}
                         key={vessel.id}
+                        id={vessel.id}
                       >
                         <Popup key={vessel.id}>
                           <PopupTable vessel={vessel} />
@@ -102,7 +92,6 @@ export default function LeafletComponent() {
           </LayersControl.Overlay>
         </LayersControl>
       </Map>
-      <p>{loaded ? "true " : "false"}</p>
     </>
   );
 }

@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "./axios";
+import Info from "./components/Info";
 
 import LeafletComponent from "./components/LeafletComponent";
+import Loading from "./components/Loading";
+import NavBar from "./components/NavBar";
+import VesselsTable from "./components/VesselsTable";
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+  const [boats, setBoats] = useState([]);
+
+  useEffect(() => {
+    axios.get("vessels").then((response) => {
+      setLoaded(true);
+      const data = response.data;
+      setBoats([...data]);
+    });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <LeafletComponent />
+      <header className="App-header">
+        <NavBar />
+      </header>
+      <LeafletComponent boats={boats} loaded={loaded} />
+      {loaded ? <VesselsTable vessels={boats} /> : <Loading />}
+      <Info />
     </div>
   );
 }
