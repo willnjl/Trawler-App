@@ -1,5 +1,23 @@
 # Trawler Alert
 
+## What is This?
+
+This is an React App which utilises an API I contructed in Laravel.
+
+It fetches the location of the vessels stored in the data base and plots them on a the map.
+
+It shows if the vessels are inside or outside the teritorial waters of the UK.
+
+## Technologies
+  - Laravel (Backend)
+  - React
+  - Axios
+  - Javascript
+  - JSX
+  - Sass
+
+
+
 ## Whats the Big Deal?
 
 ### What is a supertrawler?
@@ -8,7 +26,7 @@ A supertrawler is an enormous industrial fish factory that are over 100 meters l
 
 They have nets that could fit 13 jumbo jets.
 
-✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈
+✈ ✈ ✈ ✈ ✈ ✈   ✈ ✈ ✈ ✈ ✈ ✈   ✈✈✈
 
 Onboard fish processing allows supertrawlers to remain active for months.
 
