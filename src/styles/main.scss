@@ -1,7 +1,7 @@
-@import "_header.scss";
-@import "_map.scss";
-@import "_settings.scss";
-
+@import "_header";
+@import "_map";
+@import "_settings";
+@import "_loading";
 .page-wrapper {
   margin: auto;
   display: flex;

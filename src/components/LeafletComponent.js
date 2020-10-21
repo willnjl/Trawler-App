@@ -44,7 +44,7 @@ export default function LeafletComponent({ boats, loaded }) {
   const view = {
     lat: 55.8309257,
     lon: -4.4509832,
-    zoom: 4.3,
+    zoom: 2,
   };
   return (
     <>
