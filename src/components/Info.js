@@ -9,7 +9,7 @@ export default function Info() {
         <div>
           <h3>What is a Supertrawler?</h3>
           <p>
-            A supertrawler is an enormous industrial fish factory that are over
+            A supertrawler is an enormous industrial fish factory which are over
             100 meters long.
           </p>
           <p>They have nets that could fit 13 jumbo jets.</p>
