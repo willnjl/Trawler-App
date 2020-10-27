@@ -8,7 +8,8 @@ export default function VesselsTable({ vessels }) {
         <tr>
           <th>#</th>
           <th>Name</th>
-          <th>Location</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
           <th>Dead Weight Tonnage</th>
           <th>Flag</th>
           <th>Position Last Recieved</th>
@@ -21,17 +22,17 @@ export default function VesselsTable({ vessels }) {
             <tr>
               <td>{vessel.id}</td>
               <td>{vessel.name}</td>
-              <td>
-                <p>
-                  {"Latitude: "}
-                  {vessel.lat}
-                </p>
 
-                <p>
-                  {"Longitude: "}
-                  {vessel.lon}
-                </p>
+              <tc>
+                {"Latitude: "}
+                {vessel.lat}
+              </tc>
+
+              <td>
+                {"Longitude: "}
+                {vessel.lon}
               </td>
+
               <td>{vessel.dwt}</td>
               <td>{vessel.flag}</td>
               <td>{howLongAgo(vessel["position_received"])}</td>

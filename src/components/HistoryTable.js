@@ -30,12 +30,19 @@ export default function VesselsTable({ selected }) {
         </thead>
         <tbody>
           <tr>
-            <td>{/* <img src={vessel.img_url} className="popup-img" /> */}</td>
-
+            <td>
+              <img
+                src={vessel.img_url}
+                className="popup-img"
+                style={{ maxWidth: "175px" }}
+              />
+            </td>
             <td>{vessel.name}</td>
             <td>{vessel.flag}</td>
             <td>{howLongAgo(vessel.position_received)}</td>
-            <td>{vessel.vessel_url}</td>
+            <td>
+              <a href={vessel.vessel_url}>{"Link"}</a>
+            </td>
             <td>{vessel.dwt}</td>
           </tr>
         </tbody>

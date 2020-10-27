@@ -25,7 +25,7 @@ export default function PopupTable({ vessel }) {
           <tr>
             <th scope="row">{"Position Received"}</th>
             <td>
-              <i>{howLongAgo(vessel["signal_received"])}</i>
+              <i>{howLongAgo(vessel.position_received)}</i>
             </td>
           </tr>
           <tr>
