@@ -5,7 +5,7 @@ import Info from "./components/Info";
 import LeafletComponent from "./components/LeafletComponent";
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
-import VesselsTable from "./components/VesselsTable";
+import Tables from "./components/Tables";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -14,17 +14,19 @@ function App() {
   useEffect(() => {
     axios.get("vessels").then((response) => {
       setLoaded(true);
+      console.log("get locations!");
       const data = response.data;
       setBoats([...data]);
     });
   }, []);
+
   return (
     <div className="page-wrapper">
       <header className="App-header">
         <NavBar />
       </header>
       <LeafletComponent boats={boats} loaded={loaded} id={"map"} />
-      {loaded ? <VesselsTable vessels={boats} /> : <Loading />}
+      {loaded ? <Tables vessels={boats} /> : <Loading />}
       <Info />
     </div>
   );
