@@ -31,7 +31,6 @@ export default class Tables extends Component {
         ) : (
           <HistoryTable selected={selected} />
         )}
-        ;
       </>
     );
   }

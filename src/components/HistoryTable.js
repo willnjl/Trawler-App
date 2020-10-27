@@ -43,6 +43,7 @@ export default function VesselsTable({ selected }) {
       <Table>
         <thead id={"Locations"}>
           <tr>
+            <th>Updated</th>
             <th>Latitude</th>
             <th>Longitude</th>
             <th>Position Received</th>
@@ -50,12 +51,15 @@ export default function VesselsTable({ selected }) {
           </tr>
         </thead>
         <tbody>
-          {locations.map((row) => {
+          {[...locations].reverse().map((row) => {
             return (
               <tr>
+                <td>
+                  <i> {howLongAgo(row.position_received)}</i>
+                </td>
                 <td>{row.lat}</td>
                 <td>{row.lon}</td>
-                <td>{row.position_received}</td>
+                <td>{row.position_received},</td>
                 <td>{row.in_area ? "" : "✔"}</td>
               </tr>
             );
