@@ -32,7 +32,11 @@ export default class DropDown extends Component {
         >
           <option value={0}> show all </option>
           {vessels.map((vessel) => {
-            return <option value={vessel.id}>{vessel.name}</option>;
+            return (
+              <option key={vessel.id} value={vessel.id}>
+                {vessel.name}
+              </option>
+            );
           })}
         </select>
       </form>

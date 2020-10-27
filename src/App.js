@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     axios.get("vessels").then((response) => {
       setLoaded(true);
+      console.log("get locations!");
       const data = response.data;
       setBoats([...data]);
     });

@@ -1,40 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import { howLongAgo } from "../data/functions";
-export default function VesselsTable({ vesselId }) {
-  return null;
-  // <Table striped>
-  //   <thead id={"data"}>
-  //     <tr>
-  //       <th>#</th>
-  //       <th>Name</th>
-  //       <th>Location</th>
-  //       <th>Dead Weight Tonnage</th>
-  //       <th>Flag</th>
-  //       <th>Position Last Recieved</th>
-  //       <th>IMO</th>
-  //     </tr>
-  //   </thead>
-  //   <tbody>
-  //     <tr>
-  //       <td>{vessel.id}</td>
-  //       <td>{vessel.name}</td>
-  //       <td>
-  //         <p>
-  //           {"Latitude: "}
-  //           {vessel.lat}
-  //         </p>
+import useGetLocations from "./useGetLocations";
 
-  //         <p>
-  //           {"Longitude: "}
-  //           {vessel.lon}
-  //         </p>
-  //       </td>
-  //       <td>{vessel.dwt}</td>
-  //       <td>{vessel.flag}</td>
-  //       <td>{howLongAgo(vessel["signal_received"])}</td>
-  //       <td>{vessel.imo}</td>
-  //     </tr>
-  //   </tbody>
-  // </Table>
+export default function VesselsTable({ selected }) {
+  const [loaded, setLoaded] = useState(false);
+  const { response, isLoading } = useGetLocations({}, selected);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setLoaded(true);
+    }
+  });
+  let { vessel } = response;
+
+  return loaded ? (
+    <Table striped>
+      <thead id={"data"}>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Flag</th>
+          <th>Position Last Recieved</th>
+          <th>link</th>
+          <th>Dead Weight Tonnage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{/* <img src={vessel.img_url} className="popup-img" /> */}</td>
+
+          <td>{vessel.name}</td>
+          <td>{vessel.flag}</td>
+          <td>{howLongAgo(vessel["signal_received"])}</td>
+          <td>{vessel.vessel_url}</td>
+          <td>{vessel.dwt}</td>
+        </tr>
+      </tbody>
+    </Table>
+  ) : (
+    <p>loadiing</p>
+  );
 }

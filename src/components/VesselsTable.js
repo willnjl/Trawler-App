@@ -34,7 +34,7 @@ export default function VesselsTable({ vessels }) {
               </td>
               <td>{vessel.dwt}</td>
               <td>{vessel.flag}</td>
-              <td>{howLongAgo(vessel["signal_received"])}</td>
+              <td>{howLongAgo(vessel["position_received"])}</td>
               <td>{vessel.imo}</td>
             </tr>
           );

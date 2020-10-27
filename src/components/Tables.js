@@ -20,6 +20,7 @@ export default class Tables extends Component {
   }
 
   render() {
+    console.log("render");
     let { selected } = this.state;
     let { vessels } = this.props;
     return (
@@ -28,7 +29,7 @@ export default class Tables extends Component {
         {selected === 0 ? (
           <VesselsTable vessels={vessels} />
         ) : (
-          <HistoryTable vesselId={selected} />
+          <HistoryTable selected={selected} />
         )}
         ;
       </>
