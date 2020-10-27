@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Trawler-App/precache-manifest.fbff35ab8488983cb34f60b2163cece7.js"
+  "/Trawler-App/precache-manifest.ed7cab3d8f915cea7f674ac4c8472d69.js"
 );
 
 self.addEventListener('message', (event) => {
