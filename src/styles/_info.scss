@@ -1,0 +1,17 @@
+.info {
+  margin-top: 1rem;
+  &_title {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .accordian {
+    &_title {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
