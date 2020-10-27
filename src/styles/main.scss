@@ -1,7 +1,10 @@
-@import "_header";
-@import "_map";
-@import "_settings";
-@import "_loading";
+@import "header";
+@import "map";
+@import "settings";
+@import "loading";
+@import "dropdown";
+@import "info";
+
 .page-wrapper {
   margin: auto;
   display: flex;

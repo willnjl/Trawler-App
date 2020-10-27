@@ -24,7 +24,7 @@ export default class DropDown extends Component {
     const { vessels } = this.props;
     const { value } = this.state;
     return (
-      <Form.Group>
+      <Form.Group className={"dropdown"}>
         <Form.Control
           as={"select"}
           value={value}

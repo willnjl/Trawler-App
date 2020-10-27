@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import { howLongAgo, getCountry } from "../data/functions";
 import useGetLocations from "./useGetLocations";
 import Loading from "./Loading";
+import Thumbnail from "./Thumbnail";
 
 export default function VesselsTable({ selected }) {
   const [loaded, setLoaded] = useState(false);
@@ -31,12 +32,7 @@ export default function VesselsTable({ selected }) {
         <tbody>
           <tr>
             <td>
-              <img
-                src={vessel.img_url}
-                className="popup-img"
-                style={{ maxWidth: "175px" }}
-                alt={"Vessel"}
-              />
+              <Thumbnail url={vessel.img_url} />
             </td>
             <td>{vessel.name}</td>
             <td>{getCountry(vessel.flag).country}</td>
@@ -48,7 +44,7 @@ export default function VesselsTable({ selected }) {
           </tr>
         </tbody>
       </Table>
-      <Table>
+      <Table striped>
         <thead id={"Locations"}>
           <tr>
             <th>Updated</th>

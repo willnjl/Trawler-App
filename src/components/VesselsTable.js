@@ -1,18 +1,17 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import { howLongAgo, getCountry } from "../data/functions";
+import Thumbnail from "./Thumbnail";
 export default function VesselsTable({ vessels }) {
   return (
-    <Table striped>
+    <Table striped responsive="xl" size="sm">
       <thead id={"data"}>
         <tr>
           <th></th>
           <th>Name</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>DWT</th>
           <th>Flag</th>
-          <th>Position Last Recieved</th>
+          <th>Updated</th>
+          <th>Link</th>
           <th>IMO</th>
         </tr>
       </thead>
@@ -20,31 +19,13 @@ export default function VesselsTable({ vessels }) {
         {vessels.map((vessel) => {
           return (
             <tr key={vessel.id}>
-              {vessel.img_url ? (
-                <img
-                  src={vessel.img_url}
-                  className="popup-img"
-                  style={{ maxWidth: "175px" }}
-                  alt={"Vessel"}
-                />
-              ) : (
-                <td>{"no image"}</td>
-              )}
+              <Thumbnail url={vessel.img_url} />
               <td>{vessel.name}</td>
-
-              <td>
-                {"Latitude: "}
-                {vessel.lat}
-              </td>
-
-              <td>
-                {"Longitude: "}
-                {vessel.lon}
-              </td>
-
-              <td>{vessel.dwt}</td>
               <td>{getCountry(vessel.flag).country}</td>
               <td>{howLongAgo(vessel["position_received"])}</td>
+              <td>
+                <a href={vessel.vessel_url}>Link</a>
+              </td>
               <td>{vessel.imo}</td>
             </tr>
           );
