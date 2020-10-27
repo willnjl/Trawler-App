@@ -1,16 +1,16 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { howLongAgo } from "../data/functions";
+import { howLongAgo, getCountry } from "../data/functions";
 export default function VesselsTable({ vessels }) {
   return (
     <Table striped>
       <thead id={"data"}>
         <tr>
-          <th>#</th>
+          <th></th>
           <th>Name</th>
           <th>Latitude</th>
           <th>Longitude</th>
-          <th>Dead Weight Tonnage</th>
+          <th>DWT</th>
           <th>Flag</th>
           <th>Position Last Recieved</th>
           <th>IMO</th>
@@ -19,14 +19,23 @@ export default function VesselsTable({ vessels }) {
       <tbody>
         {vessels.map((vessel) => {
           return (
-            <tr>
-              <td>{vessel.id}</td>
+            <tr key={vessel.id}>
+              {vessel.img_url ? (
+                <img
+                  src={vessel.img_url}
+                  className="popup-img"
+                  style={{ maxWidth: "175px" }}
+                  alt={"Vessel"}
+                />
+              ) : (
+                <td>{"no image"}</td>
+              )}
               <td>{vessel.name}</td>
 
-              <tc>
+              <td>
                 {"Latitude: "}
                 {vessel.lat}
-              </tc>
+              </td>
 
               <td>
                 {"Longitude: "}
@@ -34,7 +43,7 @@ export default function VesselsTable({ vessels }) {
               </td>
 
               <td>{vessel.dwt}</td>
-              <td>{vessel.flag}</td>
+              <td>{getCountry(vessel.flag).country}</td>
               <td>{howLongAgo(vessel["position_received"])}</td>
               <td>{vessel.imo}</td>
             </tr>

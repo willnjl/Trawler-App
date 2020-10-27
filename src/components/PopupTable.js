@@ -1,11 +1,11 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { howLongAgo } from "../data/functions";
+import { howLongAgo, getCountry } from "../data/functions";
 
 export default function PopupTable({ vessel }) {
   return (
     <>
-      <img src={vessel.img_url} className="popup-img" />
+      {/* <img src={vessel.img_url} className="popup-img" alt={" Vessel"} /> */}
       <Table striped bordered>
         <tbody>
           <tr>
@@ -15,7 +15,7 @@ export default function PopupTable({ vessel }) {
           <tr>
             <th scope="row">{"Flag"}</th>
             <td>
-              <i>{vessel.flag}</i>
+              <i>{getCountry(vessel.flag).country}</i>
             </td>
           </tr>
           <tr>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
-import { howLongAgo } from "../data/functions";
+import { howLongAgo, getCountry } from "../data/functions";
 import useGetLocations from "./useGetLocations";
 import Loading from "./Loading";
 
@@ -12,7 +12,7 @@ export default function VesselsTable({ selected }) {
     if (!isLoading) {
       setLoaded(true);
     }
-  });
+  }, [isLoading]);
   let { vessel, locations } = response;
 
   return loaded ? (
@@ -25,7 +25,7 @@ export default function VesselsTable({ selected }) {
             <th>Flag</th>
             <th>Position Last Recieved</th>
             <th>link</th>
-            <th>Dead Weight Tonnage</th>
+            <th>DWT</th>
           </tr>
         </thead>
         <tbody>
@@ -35,10 +35,11 @@ export default function VesselsTable({ selected }) {
                 src={vessel.img_url}
                 className="popup-img"
                 style={{ maxWidth: "175px" }}
+                alt={"Vessel"}
               />
             </td>
             <td>{vessel.name}</td>
-            <td>{vessel.flag}</td>
+            <td>{getCountry(vessel.flag).country}</td>
             <td>{howLongAgo(vessel.position_received)}</td>
             <td>
               <a href={vessel.vessel_url}>{"Link"}</a>
@@ -59,9 +60,8 @@ export default function VesselsTable({ selected }) {
         </thead>
         <tbody>
           {[...locations].reverse().map((row) => {
-            console.log(row.in_area);
             return (
-              <tr>
+              <tr key={vessel.id}>
                 <td>
                   <i> {howLongAgo(row.position_received)}</i>
                 </td>

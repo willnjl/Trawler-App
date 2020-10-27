@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import leafletPip from "@mapbox/leaflet-pip";
 import icon from "../assets/marker-icon.png";
 
@@ -12,9 +12,8 @@ import {
   LayerGroup,
   GeoJSON,
 } from "react-leaflet";
-import L from "leaflet";
+import L, { map } from "leaflet";
 import { data } from "../data/ukBounds";
-
 import PopupTable from "./PopupTable";
 
 const polyLayer = L.geoJSON(data, {
@@ -40,12 +39,14 @@ const boundaryStyle = () => {
 const boundaryFilter = (vessels) =>
   leafletPip.pointInLayer([vessels.lon, vessels.lat], polyLayer).length > 0;
 
+const view = {
+  lat: 55.8309257,
+  lon: -4.4509832,
+  zoom: 2,
+};
+//     component
+
 export default function LeafletComponent({ boats, loaded }) {
-  const view = {
-    lat: 55.8309257,
-    lon: -4.4509832,
-    zoom: 2,
-  };
   return (
     <>
       <Map
@@ -70,10 +71,30 @@ export default function LeafletComponent({ boats, loaded }) {
           <LayersControl.Overlay name="Boundary" checked={true}>
             <GeoJSON data={data} style={boundaryStyle()} />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="Supertrawlers" checked={true}>
+          <LayersControl.Overlay name=" All Supertrawlers" checked={true}>
             <LayerGroup>
               {loaded
                 ? boats.map((vessel) => {
+                    return (
+                      <Marker
+                        position={[vessel.lat, vessel.lon]}
+                        icon={vesselMarker}
+                        key={vessel.id}
+                        id={vessel.id}
+                      >
+                        <Popup key={vessel.id}>
+                          <PopupTable vessel={vessel} />
+                        </Popup>
+                      </Marker>
+                    );
+                  })
+                : null}
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="UK only">
+            <LayerGroup>
+              {loaded
+                ? boats.filter(boundaryFilter).map((vessel) => {
                     return (
                       <Marker
                         position={[vessel.lat, vessel.lon]}

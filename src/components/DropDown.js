@@ -25,7 +25,6 @@ export default class DropDown extends Component {
     const { value } = this.state;
     return (
       <Form.Group>
-        <Form.Label>Table View</Form.Label>
         <Form.Control
           as={"select"}
           value={value}

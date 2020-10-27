@@ -1,3 +1,5 @@
+const lookup = require("country-code-lookup");
+
 export const howLongAgo = (timestamp) => {
   let now = Date.now();
   let then = new Date(timestamp);
@@ -22,4 +24,8 @@ export const howLongAgo = (timestamp) => {
   } else {
     return "Out of Range";
   }
+};
+
+export const getCountry = (code) => {
+  return lookup.byIso(code);
 };
