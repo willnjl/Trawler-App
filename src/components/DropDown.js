@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Form from "react-bootstrap/form";
 
 export default class DropDown extends Component {
   constructor(props) {
@@ -23,14 +24,14 @@ export default class DropDown extends Component {
     const { vessels } = this.props;
     const { value } = this.state;
     return (
-      <form>
-        <label htmlFor="vessel"> Table View </label>
-        <select
-          id="vessels"
+      <Form.Group>
+        <Form.Label>Table View</Form.Label>
+        <Form.Control
+          as={"select"}
           value={value}
           onChange={(e) => this.handleChange(e)}
         >
-          <option value={0}> show all </option>
+          <option value={0}> All</option>
           {vessels.map((vessel) => {
             return (
               <option key={vessel.id} value={vessel.id}>
@@ -38,8 +39,8 @@ export default class DropDown extends Component {
               </option>
             );
           })}
-        </select>
-      </form>
+        </Form.Control>
+      </Form.Group>
     );
   }
 }

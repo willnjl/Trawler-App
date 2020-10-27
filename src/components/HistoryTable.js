@@ -59,6 +59,7 @@ export default function VesselsTable({ selected }) {
         </thead>
         <tbody>
           {[...locations].reverse().map((row) => {
+            console.log(row.in_area);
             return (
               <tr>
                 <td>
@@ -67,7 +68,7 @@ export default function VesselsTable({ selected }) {
                 <td>{row.lat}</td>
                 <td>{row.lon}</td>
                 <td>{row.position_received},</td>
-                <td>{row.in_area ? "" : "✔"}</td>
+                <td>{row.in_area ? "✔" : null}</td>
               </tr>
             );
           })}
