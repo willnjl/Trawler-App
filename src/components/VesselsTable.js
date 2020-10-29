@@ -11,7 +11,6 @@ export default function VesselsTable({ vessels }) {
           <th>Name</th>
           <th>Flag</th>
           <th>Updated</th>
-          <th>Link</th>
           <th>IMO</th>
         </tr>
       </thead>
@@ -20,11 +19,12 @@ export default function VesselsTable({ vessels }) {
           return (
             <tr key={vessel.id}>
               <Thumbnail url={vessel.img_url} />
-              <td>{vessel.name}</td>
-              <td>{getCountry(vessel.flag).country}</td>
-              <td>{howLongAgo(vessel["position_received"])}</td>
               <td>
-                <a href={vessel.vessel_url}>Link</a>
+                <a href={vessel.vessel_url}>{vessel.name}</a>
+              </td>
+              <td>{getCountry(vessel.flag).country}</td>
+              <td className={"badge badge-primary badge-pill"}>
+                {howLongAgo(vessel["position_received"])}
               </td>
               <td>{vessel.imo}</td>
             </tr>

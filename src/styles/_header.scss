@@ -2,3 +2,12 @@
   position: static;
   border: red;
 }
+
+.jumbotron {
+  background-image: url("https://s3-eu-west-1.amazonaws.com/oceanographic/wp-content/uploads/2019/10/31141638/GP0STU1K0_PressMedia.jpg");
+  &_body {
+    padding: 1rem;
+    background-color: #eeeeeeaa;
+    border-radius: 6px;
+  }
+}

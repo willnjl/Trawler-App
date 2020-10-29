@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "./axios";
 import Info from "./components/Info";
-
+import Jumbotron from "react-bootstrap/Jumbotron";
 import LeafletComponent from "./components/LeafletComponent";
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
@@ -22,9 +23,16 @@ function App() {
 
   return (
     <div className="page-wrapper">
-      <header className="App-header">
-        <NavBar />
-      </header>
+      <NavBar />
+      <Jumbotron as={"header"} className={"jumbotron"}>
+        <div className={"jumbotron_body"}>
+          <h1>Trawler Tracker</h1>
+          <p>
+            Monitoring the Activity of Supertrawlers in the UK and around the
+            globe.
+          </p>
+        </div>
+      </Jumbotron>
       <LeafletComponent boats={boats} loaded={loaded} id={"map"} />
       {loaded ? <Tables vessels={boats} /> : <Loading />}
       <Info />

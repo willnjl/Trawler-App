@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import leafletPip from "@mapbox/leaflet-pip";
-import icon from "../assets/marker-icon.png";
+import icon from "../assets/noun_Fishing Vessel_23815.svg";
 
 import {
   Map,
@@ -12,7 +12,7 @@ import {
   LayerGroup,
   GeoJSON,
 } from "react-leaflet";
-import L, { map } from "leaflet";
+import L from "leaflet";
 import { data } from "../data/ukBounds";
 import PopupTable from "./PopupTable";
 
@@ -42,7 +42,7 @@ const boundaryFilter = (vessels) =>
 const view = {
   lat: 55.8309257,
   lon: -4.4509832,
-  zoom: 2,
+  zoom: 3.5,
 };
 //     component
 
@@ -71,10 +71,10 @@ export default function LeafletComponent({ boats, loaded }) {
           <LayersControl.Overlay name="Boundary" checked={true}>
             <GeoJSON data={data} style={boundaryStyle()} />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name=" All Supertrawlers" checked={true}>
+          <LayersControl.Overlay name="UK only" checked={true}>
             <LayerGroup>
               {loaded
-                ? boats.map((vessel) => {
+                ? boats.filter(boundaryFilter).map((vessel) => {
                     return (
                       <Marker
                         position={[vessel.lat, vessel.lon]}
@@ -91,10 +91,10 @@ export default function LeafletComponent({ boats, loaded }) {
                 : null}
             </LayerGroup>
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="UK only">
+          <LayersControl.Overlay name=" All Supertrawlers">
             <LayerGroup>
               {loaded
-                ? boats.filter(boundaryFilter).map((vessel) => {
+                ? boats.map((vessel) => {
                     return (
                       <Marker
                         position={[vessel.lat, vessel.lon]}
