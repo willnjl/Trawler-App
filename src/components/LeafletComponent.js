@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import leafletPip from "@mapbox/leaflet-pip";
-import icon from "../assets/noun_Fishing Vessel_23815.svg";
+import icon from "../assets/marker-icon.png";
 
 import {
   Map,
