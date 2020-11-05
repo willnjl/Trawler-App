@@ -18,7 +18,7 @@ export default function VesselsTable({ selected }) {
 
   return loaded ? (
     <>
-      <Table striped variant="dark">
+      <Table striped responsive="xl" size="sm" variant="dark">
         <thead id={"data"}>
           <tr>
             <th>Image</th>
@@ -44,7 +44,7 @@ export default function VesselsTable({ selected }) {
           </tr>
         </tbody>
       </Table>
-      <Table striped>
+      <Table striped responsive="xl" size="sm" variant="dark">
         <thead id={"Locations"}>
           <tr>
             <th>Updated</th>

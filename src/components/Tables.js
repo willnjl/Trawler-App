@@ -4,6 +4,7 @@ import HistoryTable from "./HistoryTable";
 import DropDown from "./DropDown";
 import Card from "react-bootstrap/Card";
 import Accordian from "react-bootstrap/Accordion";
+import Container from "react-bootstrap/Container";
 
 export default class Tables extends Component {
   constructor(props) {
@@ -36,35 +37,40 @@ export default class Tables extends Component {
 
     return (
       <>
-        <Accordian className={"data"} id={"data"}>
-          <Card>
-            <Accordian.Toggle
-              as={Card.Header}
-              variant="link"
-              eventKey="0"
-              onClick={() => this.handleToggle()}
-            >
-              <h3
-                className={`accordian_title  ${
-                  this.state.toggleActive ? "open" : "shut"
-                }`}
+        <Container>
+          <Accordian className={"data"} id={"data"}>
+            <Card>
+              <Accordian.Toggle
+                as={Card.Header}
+                variant="link"
+                eventKey="0"
+                onClick={() => this.handleToggle()}
               >
-                Data
-              </h3>
-              <button>{this.state.toggleActive ? "-" : "+"}</button>
-            </Accordian.Toggle>
-            <Accordian.Collapse eventKey={"0"}>
-              <Card.Body>
-                <DropDown vessels={vessels} handleChange={this.handleChange} />
-                {selected === 0 ? (
-                  <VesselsTable vessels={vessels} />
-                ) : (
-                  <HistoryTable selected={selected} />
-                )}
-              </Card.Body>
-            </Accordian.Collapse>
-          </Card>
-        </Accordian>
+                <h3
+                  className={`accordian_title  ${
+                    this.state.toggleActive ? "open" : "shut"
+                  }`}
+                >
+                  Data
+                </h3>
+                <button>{this.state.toggleActive ? "-" : "+"}</button>
+              </Accordian.Toggle>
+              <Accordian.Collapse eventKey={"0"}>
+                <Card.Body>
+                  <DropDown
+                    vessels={vessels}
+                    handleChange={this.handleChange}
+                  />
+                  {selected === 0 ? (
+                    <VesselsTable vessels={vessels} />
+                  ) : (
+                    <HistoryTable selected={selected} />
+                  )}
+                </Card.Body>
+              </Accordian.Collapse>
+            </Card>
+          </Accordian>
+        </Container>
       </>
     );
   }

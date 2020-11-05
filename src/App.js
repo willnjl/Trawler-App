@@ -29,12 +29,13 @@ function App() {
           <h1 class="logo">Trawler Tracker</h1>
           <p>
             <i>
-              Monitoring the Activity of Supertrawlers in the UK and around the
-              globe.
+              Monitoring the activity of super trawlers and factory ships in the
+              UK and around the globe.
             </i>
           </p>
         </div>
       </Jumbotron>
+
       <LeafletComponent boats={boats} loaded={loaded} id={"map"} />
       {loaded ? <Tables vessels={boats} /> : <Loading />}
       <Info />

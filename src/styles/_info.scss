@@ -4,14 +4,11 @@
     padding: 1rem;
     font-size: 2rem;
   }
+}
 
-  .accordian {
-    &_title {
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.info {
+  margin: auto;
+  max-width: 22rem;
+  min-width: 18rem;
+  margin-top: 1rem;
 }

@@ -1,93 +1,171 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import TwitFeed from "./TwitFeed";
 
 export default function Info() {
   return (
     <Container id={"why"}>
       <Row>
-        <h2 className={"info_title"}>Whats the Big Deal?</h2>
-      </Row>
-      <Row>
-        <Col as={"article"} lg={true}>
-          <h3 className="accordian_title">What is a Supertrawler?</h3>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">What is a Supertrawler?</h3>
+          </Card.Header>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <p>
+                  A super trawler is an enormous industrial fish factory ship
+                  which can be over 100 meters long.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  Contemporary factory ships are automated and have nets that
+                  could fit 13 jumbo jets.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈</p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  Onboard fish processing allows super trawlers to remain active
+                  for months.
+                </p>
+              </ListGroupItem>
+            </ListGroup>
+          </Card.Body>
+        </Card>
 
-          <p>
-            A supertrawler is an enormous industrial fish factory which are over
-            100 meters long.
-          </p>
-          <p>They have nets that could fit 13 jumbo jets.</p>
-          <p>✈✈✈✈✈✈ ✈✈✈✈✈✈ ✈✈✈</p>
-          <p>
-            Onboard fish processing allows supertrawlers to remain active for
-            months.
-          </p>
-        </Col>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">
+              Supertrawlers are plundering earth's oceans.
+            </h3>
+          </Card.Header>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <p>
+                  Nets are large and crude, often catching hundreds of tonnes of
+                  fish every day.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  Commercial fish processing ships can affect birds, whales,
+                  dolphins, turtles and sharks by their broad reach methods of
+                  catching fish.
+                </p>
+              </ListGroupItem>
 
-        <Col as={"article"} md={true}>
-          <h3 className="accordian_title">
-            Supertrawlers are plundering earth's oceans.
-          </h3>
+              <ListGroupItem>
+                <p>
+                  Super trawlers have been found operating in marine protected
+                  areas.
+                </p>
+              </ListGroupItem>
+            </ListGroup>
+          </Card.Body>
+        </Card>
 
-          <p>Nets are a crude and bi-catch is inevitable.</p>
-          <p>Supertrawlers operate in marine protected areas.</p>
-          <p>The nets can catch hundreds of tonnes of fish everyday</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col as={"article"} lg={true}>
-          <h3 className="accordian_title">The problem is getting worse</h3>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">The problem is getting worse</h3>
+          </Card.Header>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <p>
+                  Time spent in marine protected areas by super trawlers in the
+                  first half 2020 was more than double than the whole of last
+                  year.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>This threatens vital ocean habitats and ecosystems</p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  According to Greenpeace data super trawlers spent 5,590 hours
+                  in 19 of the UK’s marine protected areas in the first six
+                  months of 2020, compared with 2,963 hours in 39 protected
+                  areas in the whole of last year.
+                </p>
+              </ListGroupItem>
+            </ListGroup>
+          </Card.Body>
+        </Card>
 
-          <p>
-            Time spent in marine protected areas by supertrawlers in the first
-            half 2020 was more than double than the whole of last year.
-          </p>
-          <p>This threatens vital ocean habitats and ecosystems</p>
-          <p>
-            According to Greenpeace data supertrawlers spent 5,590 hours in 19
-            of the UK’s marine protected areas in the first six months of 2020,
-            compared with 2,963 hours in 39 protected areas in the whole of last
-            year
-          </p>
-        </Col>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">Supertrawlers hurt economies.</h3>
+          </Card.Header>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <p>
+                  Super trawlers plundering our seas means fishing is
+                  unsustainable in the long term.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  They also take away the livelihoods of local fishers around
+                  the world.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  They can sell their catch wherever they get the best price.
+                  Even if they catch fish in British waters, they will not
+                  likely end up on British plates.
+                </p>
+              </ListGroupItem>
+            </ListGroup>
+          </Card.Body>
+        </Card>
 
-        <Col as={"article"} lg={true}>
-          <h3 className="accordian_title">Supertrawlers hurt economies.</h3>
-
-          <p>
-            Supertrawlers are plunding our seas meaning fishing is unsustainable
-            long term and taking away livelyhoods of local fishers around the
-            world.
-          </p>
-          <p>
-            They can sell their catch wherever they get the best price. Meaning
-            even if they catch fish in British waters, it will likely not up on
-            British Plates
-          </p>
-        </Col>
-      </Row>
-      <Row>
-        <Col as={"article"} lg={true}>
-          <h3 className="accordian_title">
-            We have an opertunity to make a change.
-          </h3>
-
-          <p>
-            Regardless of what you think of leaving the EU, when the UK leaves
-            the EU common fisheries policy it will be possible to ban
-            supertrawlers
-          </p>
-          <p>
-            Last year 23 supertrawlers operated in UK waters. None we're
-            British.
-          </p>
-          <p>
-            This will only happen if people are aware of the scale of the
-            problem and lobby their MP's
-          </p>
-        </Col>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">We have an opertunity to make a change.</h3>
+          </Card.Header>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <p>
+                  Last year 23 super trawlers operated in UK waters. None of
+                  them were British.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  egardless of what you think about leaving the EU, when the UK
+                  leaves the EU Common Fisheries policy it will be possible for
+                  the UK to ban super trawlers.
+                </p>
+              </ListGroupItem>
+              <ListGroupItem>
+                <p>
+                  This will only happen if people are aware of the scale of the
+                  problem and lobby their MPs
+                </p>
+              </ListGroupItem>
+            </ListGroup>
+          </Card.Body>
+        </Card>
+        <Card as={"article"} className={"info"}>
+          <Card.Header>
+            <h3 className="logo">TwitterFeed</h3>
+          </Card.Header>
+          <Card.Body>
+            <TwitFeed />
+          </Card.Body>
+        </Card>
       </Row>
     </Container>
   );
