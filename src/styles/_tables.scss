@@ -1,0 +1,12 @@
+.badge-time-ago {
+  background-color: white;
+  color: #333333;
+}
+
+.table__link {
+  color: #0ffcd3;
+  transition: color 200ms ease-in;
+  &:hover {
+    color: #19d2e6;
+  }
+}

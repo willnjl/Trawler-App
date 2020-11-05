@@ -2,9 +2,10 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { howLongAgo, getCountry } from "../data/functions";
 import Thumbnail from "./Thumbnail";
+import Badge from "react-bootstrap/Badge";
 export default function VesselsTable({ vessels }) {
   return (
-    <Table striped responsive="xl" size="sm">
+    <Table striped responsive="xl" size="sm" variant="dark">
       <thead id={"data"}>
         <tr>
           <th></th>
@@ -20,11 +21,15 @@ export default function VesselsTable({ vessels }) {
             <tr key={vessel.id}>
               <Thumbnail url={vessel.img_url} />
               <td>
-                <a href={vessel.vessel_url}>{vessel.name}</a>
+                <a className="table__link" href={vessel.vessel_url}>
+                  {vessel.name}
+                </a>
               </td>
               <td>{getCountry(vessel.flag).country}</td>
-              <td className={"badge badge-primary badge-pill"}>
-                {howLongAgo(vessel["position_received"])}
+              <td>
+                <Badge pill variant="time-ago">
+                  {howLongAgo(vessel["position_received"])}
+                </Badge>
               </td>
               <td>{vessel.imo}</td>
             </tr>

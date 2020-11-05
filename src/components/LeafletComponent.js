@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import leafletPip from "@mapbox/leaflet-pip";
-import icon from "../assets/icons8-fishing_boat.png";
+import icon from "../assets/ship-front-view.png";
 
 import {
   Map,
@@ -27,8 +27,8 @@ const polyLayer = L.geoJSON(data, {
 
 const vesselMarker = L.icon({
   iconUrl: icon,
-  iconSize: [50, 50],
-  iconAnchor: [25, 40],
+  iconSize: [30, 30],
+  iconAnchor: [15, 30],
   popupAnchor: [0, -30],
 });
 

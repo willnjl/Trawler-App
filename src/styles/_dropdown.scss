@@ -1,3 +1,25 @@
-.dropdown {
+.data {
   margin-top: 2rem;
+}
+
+.data {
+  .accordian_title,
+  button {
+    font-size: 2rem;
+    color: #0ffcd3;
+    cursor: pointer;
+    transition: color 200ms ease-in;
+    &:hover {
+      color: #0ff28a;
+    }
+  }
+  .card {
+    .card-header {
+      font-family: "Bebas Neue", cursive;
+      background-color: #333333;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }

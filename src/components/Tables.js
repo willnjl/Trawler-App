@@ -11,8 +11,10 @@ export default class Tables extends Component {
 
     this.state = {
       selected: 0,
+      toggleActive: false,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleChange(value) {
@@ -21,16 +23,35 @@ export default class Tables extends Component {
     });
   }
 
+  handleToggle() {
+    const { toggleActive } = this.state;
+    this.setState({
+      toggleActive: !toggleActive,
+    });
+  }
+
   render() {
-    console.log("render");
     let { selected } = this.state;
     let { vessels } = this.props;
+
     return (
       <>
-        <Accordian>
+        <Accordian className={"data"}>
           <Card>
-            <Accordian.Toggle as={Card.Header} variant="link" eventKey="0">
-              <h3 className="accordian_title">Data</h3>
+            <Accordian.Toggle
+              as={Card.Header}
+              variant="link"
+              eventKey="0"
+              onClick={() => this.handleToggle()}
+            >
+              <h3
+                className={`accordian_title  ${
+                  this.state.toggleActive ? "open" : "shut"
+                }`}
+              >
+                Data
+              </h3>
+              <button>{this.state.toggleActive ? "-" : "+"}</button>
             </Accordian.Toggle>
             <Accordian.Collapse eventKey={"0"}>
               <Card.Body>

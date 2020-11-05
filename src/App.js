@@ -26,10 +26,12 @@ function App() {
       <NavBar />
       <Jumbotron as={"header"} className={"jumbotron"}>
         <div className={"jumbotron_body"}>
-          <h1>Trawler Tracker</h1>
+          <h1 class="logo">Trawler Tracker</h1>
           <p>
-            Monitoring the Activity of Supertrawlers in the UK and around the
-            globe.
+            <i>
+              Monitoring the Activity of Supertrawlers in the UK and around the
+              globe.
+            </i>
           </p>
         </div>
       </Jumbotron>

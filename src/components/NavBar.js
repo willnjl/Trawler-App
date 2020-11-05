@@ -4,12 +4,10 @@ import Nav from "react-bootstrap/Nav";
 
 export default function NavBar() {
   return (
-    <Navbar
-      defaultActiveKey={"#map"}
-      className="justify-content-end"
-      expand="md"
-    >
-      <Navbar.Brand href="#home">Trawler Tracker</Navbar.Brand>
+    <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
+      <Navbar.Brand href="#home">
+        <h1 class="logo">Trawler Tracker</h1>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls=" basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

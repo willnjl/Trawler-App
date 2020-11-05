@@ -18,7 +18,7 @@ export default function VesselsTable({ selected }) {
 
   return loaded ? (
     <>
-      <Table striped>
+      <Table striped variant="dark">
         <thead id={"data"}>
           <tr>
             <th>Image</th>

@@ -1,9 +1,11 @@
+@import "reset";
 @import "header";
 @import "map";
 @import "settings";
 @import "loading";
 @import "dropdown";
 @import "info";
+@import "tables";
 
 .page-wrapper {
   margin: auto;
@@ -11,4 +13,9 @@
   flex-direction: column;
   padding: 1.5rem;
   max-width: 1250px;
+}
+
+.logo {
+  font-family: "Bebas Neue", cursive;
+  color: #0ffcd3;
 }
