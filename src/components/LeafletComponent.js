@@ -54,6 +54,7 @@ export default function LeafletComponent({ boats, loaded }) {
         className={"map" + " " + "main__elem"}
         center={[view.lat, view.lon]}
         zoom={view.zoom}
+        id={"map"}
       >
         <LayersControl position="topright">
           <LayersControl.BaseLayer name="Open Street Map" checked={true}>

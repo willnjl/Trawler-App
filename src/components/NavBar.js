@@ -12,7 +12,7 @@ export default function NavBar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
-            <Nav.Link>{"Map"}</Nav.Link>
+            <Nav.Link href={"#map"}>{"Map"}</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href={"#data"}>{"Data"}</Nav.Link>

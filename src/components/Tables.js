@@ -36,7 +36,7 @@ export default class Tables extends Component {
 
     return (
       <>
-        <Accordian className={"data"}>
+        <Accordian className={"data"} id={"data"}>
           <Card>
             <Accordian.Toggle
               as={Card.Header}
