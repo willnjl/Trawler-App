@@ -75,7 +75,7 @@ export default function Info() {
 
         <Card as={"article"} className={"info"}>
           <Card.Header>
-            <h3 className="logo">The problem is getting worse</h3>
+            <h3 className="logo">The problem is getting worse.</h3>
           </Card.Header>
           <Card.Body>
             <ListGroup variant="flush">
@@ -132,7 +132,7 @@ export default function Info() {
 
         <Card as={"article"} className={"info"}>
           <Card.Header>
-            <h3 className="logo">We have an opertunity to make a change.</h3>
+            <h3 className="logo">We have an opportunity to make a change.</h3>
           </Card.Header>
           <Card.Body>
             <ListGroup variant="flush">
@@ -152,7 +152,7 @@ export default function Info() {
               <ListGroupItem>
                 <p>
                   This will only happen if people are aware of the scale of the
-                  problem and lobby their MPs
+                  problem and lobby their MPs.
                 </p>
               </ListGroupItem>
             </ListGroup>

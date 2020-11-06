@@ -37,40 +37,35 @@ export default class Tables extends Component {
 
     return (
       <>
-        <Container>
-          <Accordian className={"data"} id={"data"}>
-            <Card>
-              <Accordian.Toggle
-                as={Card.Header}
-                variant="link"
-                eventKey="0"
-                onClick={() => this.handleToggle()}
+        <Accordian className={"data"} id={"data"}>
+          <Card>
+            <Accordian.Toggle
+              as={Card.Header}
+              variant="link"
+              eventKey="0"
+              onClick={() => this.handleToggle()}
+            >
+              <h3
+                className={`accordian_title  ${
+                  this.state.toggleActive ? "open" : "shut"
+                }`}
               >
-                <h3
-                  className={`accordian_title  ${
-                    this.state.toggleActive ? "open" : "shut"
-                  }`}
-                >
-                  Data
-                </h3>
-                <button>{this.state.toggleActive ? "-" : "+"}</button>
-              </Accordian.Toggle>
-              <Accordian.Collapse eventKey={"0"}>
-                <Card.Body>
-                  <DropDown
-                    vessels={vessels}
-                    handleChange={this.handleChange}
-                  />
-                  {selected === 0 ? (
-                    <VesselsTable vessels={vessels} />
-                  ) : (
-                    <HistoryTable selected={selected} />
-                  )}
-                </Card.Body>
-              </Accordian.Collapse>
-            </Card>
-          </Accordian>
-        </Container>
+                Data
+              </h3>
+              <button>{this.state.toggleActive ? "-" : "+"}</button>
+            </Accordian.Toggle>
+            <Accordian.Collapse eventKey={"0"}>
+              <Card.Body>
+                <DropDown vessels={vessels} handleChange={this.handleChange} />
+                {selected === 0 ? (
+                  <VesselsTable vessels={vessels} />
+                ) : (
+                  <HistoryTable selected={selected} />
+                )}
+              </Card.Body>
+            </Accordian.Collapse>
+          </Card>
+        </Accordian>
       </>
     );
   }
