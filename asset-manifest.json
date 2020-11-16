@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Trawler-App/static/css/main.53fd0582.chunk.css",
-    "main.js": "/Trawler-App/static/js/main.5fe1ec31.chunk.js",
-    "main.js.map": "/Trawler-App/static/js/main.5fe1ec31.chunk.js.map",
+    "main.js": "/Trawler-App/static/js/main.e9a2d877.chunk.js",
+    "main.js.map": "/Trawler-App/static/js/main.e9a2d877.chunk.js.map",
     "runtime-main.js": "/Trawler-App/static/js/runtime-main.1bb273cc.js",
     "runtime-main.js.map": "/Trawler-App/static/js/runtime-main.1bb273cc.js.map",
     "static/css/2.65dbc30e.chunk.css": "/Trawler-App/static/css/2.65dbc30e.chunk.css",
     "static/js/2.9e6e0a5b.chunk.js": "/Trawler-App/static/js/2.9e6e0a5b.chunk.js",
     "static/js/2.9e6e0a5b.chunk.js.map": "/Trawler-App/static/js/2.9e6e0a5b.chunk.js.map",
     "index.html": "/Trawler-App/index.html",
-    "precache-manifest.af3842ecbf38df9288197a926a3b150b.js": "/Trawler-App/precache-manifest.af3842ecbf38df9288197a926a3b150b.js",
+    "precache-manifest.09f533d696ffd011f44661696c9ea26e.js": "/Trawler-App/precache-manifest.09f533d696ffd011f44661696c9ea26e.js",
     "service-worker.js": "/Trawler-App/service-worker.js",
     "static/css/2.65dbc30e.chunk.css.map": "/Trawler-App/static/css/2.65dbc30e.chunk.css.map",
     "static/css/main.53fd0582.chunk.css.map": "/Trawler-App/static/css/main.53fd0582.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.65dbc30e.chunk.css",
     "static/js/2.9e6e0a5b.chunk.js",
     "static/css/main.53fd0582.chunk.css",
-    "static/js/main.5fe1ec31.chunk.js"
+    "static/js/main.e9a2d877.chunk.js"
   ]
 }
