@@ -73,7 +73,7 @@ export default function LeafletComponent({ boats, loaded }) {
           <LayersControl.Overlay name="Boundary" checked={true}>
             <GeoJSON data={data} style={boundaryStyle()} />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="UK only" checked={true}>
+          <LayersControl.Overlay name="UK only">
             <LayerGroup>
               {loaded
                 ? boats.filter(boundaryFilter).map((vessel) => {
@@ -93,7 +93,7 @@ export default function LeafletComponent({ boats, loaded }) {
                 : null}
             </LayerGroup>
           </LayersControl.Overlay>
-          <LayersControl.Overlay name=" All Supertrawlers">
+          <LayersControl.Overlay checked={true} name="All Supertrawlers">
             <LayerGroup>
               {loaded
                 ? boats.map((vessel) => {
